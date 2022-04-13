@@ -20,8 +20,7 @@ repositories {
 intellij {
     version.set(libs.versions.idea)
 
-    plugins.addAll("java", "gradle")
-    plugins.addProvider(libs.versions.kotlinPlugin.map { "org.jetbrains.kotlin:$it" })
+    plugins.addAll("java", "gradle", "org.jetbrains.kotlin")
 
     updateSinceUntilBuild.set(false)
 }
@@ -36,7 +35,3 @@ tasks.withType<KotlinCompile>().configureEach {
 tasks.runPluginVerifier {
     ideVersions.addAll("IC-2021.1", "IC-2021.2", "IC-2021.3", "IC-2022.1")
 }
-
-// `intellij.plugins` is defined as `ListProperty<Any>` which causes an overload ambiguity error when trying to pass
-// something to the `Provider` version of `add`, so this function helps get around that issue.
-fun <T> ListProperty<T>.addProvider(provider: Provider<out T>) = add(provider)

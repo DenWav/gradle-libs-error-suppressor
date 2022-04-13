@@ -108,7 +108,7 @@ class GradleKotlinDslVersionCatalogsInPluginsBlockErrorSuppressor : HighlightInf
 
         private val minimumGradleVersion = GradleVersion.version("7.2")
 
-        private val errorMessagePattern = Regex("\\[DSL_SCOPE_VIOLATION] 'val Project\\.\\w+: \\w+' " +
+        private val errorMessagePattern = Regex("(?:\\[DSL_SCOPE_VIOLATION] )?'val Project\\.\\w+: \\w+' " +
             "can't be called in this context by implicit receiver\\. Use the explicit one if necessary")
 
         private val ktScriptInitPattern =
