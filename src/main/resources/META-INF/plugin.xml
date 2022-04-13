@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>dev.denwav.gradle-libs-error-suppressor</id>
+
+    <name>Gradle Libs Error Suppressor</name>
+
+    <vendor email="kyle@denwav.dev">Kyle Wood</vendor>
+
+    <description><![CDATA[
+        Suppresses the incorrect error IntelliJ shows when using version catalogs in the plugins block of a Kotlin DSL
+        Gradle script for Gradle 7.2 and above.
+    ]]></description>
+
+    <idea-version since-build="211.6693" />
+
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.gradle</depends>
+    <depends>org.jetbrains.kotlin</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <daemon.highlightInfoFilter implementation="dev.denwav.gradlelibserrorsuppressor.GradleKotlinDslVersionCatalogsInPluginsBlockErrorSuppressor" />
+    </extensions>
+</idea-plugin>

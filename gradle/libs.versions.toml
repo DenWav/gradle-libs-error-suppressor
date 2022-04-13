@@ -1,0 +1,7 @@
+[versions]
+idea = "2021.1"
+kotlinPlugin = "211-1.4.32-release-IJ6693.72"
+
+[plugins]
+kotlin = "org.jetbrains.kotlin.jvm:1.6.20"
+intellij = "org.jetbrains.intellij:1.5.2"
