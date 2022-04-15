@@ -6,8 +6,10 @@
     <vendor email="kyle@denwav.dev">Kyle Wood</vendor>
 
     <description><![CDATA[
-        Suppresses the incorrect error IntelliJ shows when using version catalogs in the plugins block of a Kotlin DSL
-        Gradle script for Gradle 7.2 and above.
+        Fix <a href="https://youtrack.jetbrains.com/issue/KTIJ-19369">KTIJ-19369</a>: Suppresses the incorrect error
+        IntelliJ shows when using version catalogs in the plugins block of a Kotlin DSL Gradle script for Gradle 7.2 and
+        above.
+        <p><img src="https://raw.githubusercontent.com/DenWav/gradle-libs-error-suppressor/main/pluginsBlock.png" alt="Screenshot" width="300" />
     ]]></description>
 
     <idea-version since-build="211.6693" />
